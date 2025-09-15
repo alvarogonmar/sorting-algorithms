@@ -22,7 +22,26 @@ void bubbleSort(vector<int> &arr)
     }
 }
 
-void selectionSort(vector<int> &arr) {}
+void selectionSort(vector<int> &arr)
+{
+    for (int i = 0; i < arr.size() - 1; i++)
+    {
+        int min_index = i;
+        for (int j = i + 1; j < arr.size(); j++)
+        {
+            if (arr[j] < arr[min_index])
+            {
+                min_index = j;
+            }
+        }
+        if (min_index != i)
+        {
+            int temp = arr[i];
+            arr[i] = arr[min_index];
+            arr[min_index] = temp;
+        }
+    }
+}
 
 int main()
 {
@@ -42,6 +61,15 @@ int main()
     cout << endl;
 
     bubbleSort(arr);
+
+    cout << "Sorted array: ";
+    for (int num : arr)
+    {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    selectionSort(arr);
 
     cout << "Sorted array: ";
     for (int num : arr)
