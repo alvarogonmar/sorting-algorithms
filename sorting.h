@@ -12,4 +12,8 @@ void bubbleSort(vector<int> &arr);
 // Selecciona el elemento mínimo de la parte no ordenada y lo coloca en la posición correcta.
 void selectionSort(vector<int> &arr);
 
+// Insertion Sort
+// Construye la lista ordenada un elemento a la vez, insertando cada nuevo elemento en su posición correcta.
+void insertionSort(vector<int> &arr);
+
 #endif // SORTING_H
