@@ -47,6 +47,12 @@ void insertionSort(vector<int> &arr)
 {
     for (int i = 1; i < arr.size(); i++)
     {
+        int temp = arr[i];
+        int j = i - 1;
+
+        while (temp < arr[j] && j > -1)
+        {
+        }
     }
 }
 
