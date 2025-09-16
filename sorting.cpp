@@ -43,6 +43,10 @@ void selectionSort(vector<int> &arr)
     }
 }
 
+void insertionSort(vector<int> &arr)
+{
+}
+
 int main()
 {
     srand(time(nullptr));
