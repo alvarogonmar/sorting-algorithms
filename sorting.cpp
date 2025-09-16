@@ -62,7 +62,7 @@ int main()
 
     bubbleSort(arr);
 
-    cout << "Sorted array: ";
+    cout << "Bubble Sort Sorted array: ";
     for (int num : arr)
     {
         cout << num << " ";
@@ -71,11 +71,12 @@ int main()
 
     selectionSort(arr);
 
-    cout << "Sorted array: ";
+    cout << "Selection Sort Sorted array: ";
     for (int num : arr)
     {
         cout << num << " ";
     }
     cout << endl;
+
     return 0;
 }
