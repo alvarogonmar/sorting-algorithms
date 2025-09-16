@@ -94,5 +94,13 @@ int main()
     }
     cout << endl;
 
+    insertionSort(arr);
+
+    cout << "Insertion Sort Sorted array: ";
+    for (int num : arr)
+    {
+        cout << num << " ";
+    }
+    cout << endl;
     return 0;
 }
