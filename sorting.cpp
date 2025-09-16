@@ -45,6 +45,9 @@ void selectionSort(vector<int> &arr)
 
 void insertionSort(vector<int> &arr)
 {
+    for (int i = 1; i < arr.size(); i++)
+    {
+    }
 }
 
 int main()
