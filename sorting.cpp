@@ -64,3 +64,63 @@ void insertionSort(vector<int> &arr)
         }
     }
 }
+
+// Algoritmo Merge Sort
+void merge(vector<int>& vec, int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    // Guarda todos los elementos de la izquierda en L y de la derecha en R
+    vector<int> L(n1), R(n2);
+
+    for (int i = 0; i < n1; i++) {
+        L[i] = vec[left + i];
+    }
+    for (int j = 0; j < n2; j++) {
+        R[j] = vec[mid + 1 + j];
+    }
+
+    int i = 0;
+    int j = 0;
+    int k = left;
+
+    // Va acomodando de menor elemento a mayor
+    while (i < n1 && j < n2) {
+        if (L[i] < R[j]) {
+            vec[k] = L[i];
+            i++;
+        }
+        else {
+            vec[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        vec[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        vec[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(vector<int> &arr, int left, int right) {
+    if (left >= right) {
+        return;
+    }
+
+    int mid = left + (right - left) / 2;
+
+    // Divide los elementos entre dos
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid + 1, right);
+
+    
+    merge(arr, left, mid, right);
+}
