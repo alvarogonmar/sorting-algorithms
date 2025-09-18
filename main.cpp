@@ -49,5 +49,23 @@ int main()
         cout << num << " ";
     }
     cout << endl;
+
+
+    mergeSort(arr, 0, arr.size() - 1);
+
+    cout << "Merge Sort Sorted array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    quickSort(arr, 0, arr.size() - 1);
+
+    cout << "Quick Sort Sorted array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
     return 0;
 }
